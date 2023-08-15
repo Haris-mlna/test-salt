@@ -1,0 +1,66 @@
+<header>
+  <nav class="nav-main">
+    <div class="logo">
+      <h1>
+        Social
+        <span>Network</span>
+      </h1>
+    </div>
+
+    <!-- DESKTOP ONLY -->
+    <div class="rt-nav desktop-nav" *ngIf="isDesktop">
+      <div class="searchbox">
+        <input type="search" placeholder="Find..." />
+        <button class="search-btn">
+          <img src="assets/icons/find.png" alt="find" />
+        </button>
+      </div>
+      <button class="upload-btn" (click)="upload()">
+        <img src="/assets/icons/upload.png" alt="upload" />
+        UPLOAD
+      </button>
+
+      <!-- CHECK IF USER LOGGED IN -->
+      <div class="user" *ngIf="isLoggedIn">
+        <div class="img-user-container">
+          <img class="{{ defaultFilter }} {{defaultImage}}" src="{{ userImage }}" alt="" />
+        </div>
+        <div class="info-user">
+          <p class="first-name">{{firstName}}</p>
+          <p class="last-name">{{lastName}}</p>
+        </div>
+      </div>
+
+      <!-- CHECK IF USER IS A GUEST -->
+      <button *ngIf="!isLoggedIn" class="login" (click)="login()">LOGIN</button>
+    </div>
+
+    <!-- MOBILE ONLY -->
+    <div class="mobile-nav" *ngIf="!isDesktop">
+      <button>
+        <img src="assets/icons/menu.png" alt="" />
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- second navigation -->
+
+<nav class="nav-secondary">
+  <a href="/">Home</a>
+  <div class="divider">/</div>
+  <a href="/videos">Videos</a>
+  <div class="divider">/</div>
+  <a href="/people">People</a>
+  <div class="divider">/</div>
+  <a href="/docs">Documents</a>
+  <div class="divider">/</div>
+  <a href="event">Events</a>
+  <div class="divider">/</div>
+  <a href="communities">Communities</a>
+  <div class="divider">/</div>
+  <a href="favorites">Favorites</a>
+  <div class="divider">/</div>
+  <a href="channels">Channels</a>
+  <div class="divider">/</div>
+</nav>

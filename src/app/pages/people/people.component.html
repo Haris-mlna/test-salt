@@ -1,0 +1,14 @@
+<app-header></app-header>
+
+<div class="list-user" *ngFor="let user of userList">
+  <img class="img" src="{{ user.image }}" alt="{{ user.firstName }}" />
+  <div class="info-container">
+    <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+    <p>Email: {{ user.email }}</p>
+    <p>Age: {{ user.age }}</p>
+    <p class="important">username : {{ user.username }}</p>
+    <p class="important">password : {{ user.password }}</p>
+  </div>
+</div>
+
+<app-footer></app-footer>

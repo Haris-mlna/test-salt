@@ -1,0 +1,96 @@
+<app-header></app-header>
+<!-- HEADER COMP -->
+
+<main>
+  <!-- SECTION VIDEOS -->
+
+  <div class="alert">
+    IF YOU WANT TO LOGIN OPEN PEOPLE PAGES AND USE USERNAME AND IT'S PASSWORDS
+  </div>
+
+  <section>
+    <div class="content-container">
+      <h1 class="title">Videos</h1>
+      <div class="grid-container">
+        <div class="card card-main">Main</div>
+        <div class="card card2">Sub-Main</div>
+        <div class="card card3">Sub-Main</div>
+        <div class="card card4">Sub-Main</div>
+        <div class="card card5">Sub-Main</div>
+        <div class="card card6 card-more">MORE</div>
+      </div>
+    </div>
+    <div class="sidebar-container">
+      <h1 class="title">Activity</h1>
+
+      <!-- ACTIVITY -->
+
+      <div class="activity-container">
+        <div
+          class="activity"
+          *ngFor="let comment of commentList; let i = index"
+        >
+          <div class="activity-img"></div>
+          <div class="activity-info">
+            <div class="activity-title">
+              <h6>{{ comment.user.username }}</h6>
+              commented
+            </div>
+            <p>{{ comment.body }}</p>
+            <div class="activity-stamp">{{ timestamp[i] }} minutes ago</div>
+            <!-- Use timestamp[i] to get the timestamp for the current comment -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ACTIVITY ENDS -->
+    </div>
+  </section>
+
+  <!-----------------------------------------------------------------------------------------------------------------------------------
+    
+    SECTION VIDEOS ENDS
+  
+  ------------------------------------------------------------------------------------------------------------------------------------>
+
+  <section>
+    <div class="content-container">
+      <h1 class="title">People</h1>
+      <div class="grid-container">
+        <div class="card card-main">
+          <img src="{{ userone.image }}" alt="" />
+        </div>
+        <div class="card card2">
+          <img src="{{ usertwo.image }}" alt="" />
+        </div>
+        <div class="card card3">
+          <img src="{{ userthree.image }}" alt="" />
+        </div>
+        <div class="card card4">
+          <img src="{{ userfour.image }}" alt="" />
+        </div>
+        <div class="card card5">
+          <img src="{{ userfive.image }}" alt="" />
+        </div>
+        <div class="card card6 card-more">MORE</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content-container">
+      <h1 class="title">Documents</h1>
+      <div class="grid-container">
+        <div class="card card-main">Main</div>
+        <div class="card card2">Sub-Main</div>
+        <div class="card card3">Sub-Main</div>
+        <div class="card card4">Sub-Main</div>
+        <div class="card card5">Sub-Main</div>
+        <div class="card card6 card-more">MORE</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER COMP -->
+<app-footer></app-footer>
